@@ -1,0 +1,94 @@
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <!-- <div class="col-md-4">
+        </div> -->
+      <div class="col-md-3 shadow-lg p-3 mb-5 bg-body rounded">
+        <form [formGroup]="loginForm">
+          <div class="d-grid align-items-center justify-content-center">
+            <img
+              src="../../assets/img/employee-icon.png"
+              class="img-login mb-5 mx-auto"
+            />
+
+            
+
+            <div>
+              <label for="validationUsername" class="form-label"
+                >Username</label
+              >
+              <input
+                formControlName="username"
+                type="text"
+                class="form-control form-control-md"
+                placeholder="Username"
+              />
+              <div
+                *ngIf="f['username'].touched && f['username'].invalid"
+                class="text-danger"
+              >
+                <div
+                  *ngIf="
+                    f['username'].errors && f['username'].errors['required']
+                  "
+                >
+                  Username is required!!!!
+                </div>
+              </div>
+            </div>
+            <div>
+              <label for="validationPassword" class="form-label"
+                >Password</label
+              >
+              <input
+                formControlName="password"
+                type="password"
+                required
+                class="form-control form-control-md"
+                placeholder="Password"
+              />
+              <div
+                *ngIf="f['password'].touched && f['password'].invalid"
+                class="text-danger"
+              >
+                <div
+                  *ngIf="
+                    f['password'].errors && f['password'].errors['required']
+                  "
+                >
+                  Username is required!!!!
+                </div>
+              </div>
+            </div>
+            <div class="text-center text-lg-end mt-4 pt-2">
+              <button
+                mat-raised-button
+                class="btn btn-primary btn-md mb-5 rounded"
+                (click)="login()"
+              >
+                LOGIN
+              </button>
+            </div>
+            <hr>
+            <div style="margin-top: -100px;">
+                <p class="text-bold" >Use this for login :</p>
+                  <p class="text-muted">Username : hari </p>
+                  <p class="text-muted" style="margin-top: -15px;">Password : hari127</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .h-custom {
+    height: calc(100% - 73px);
+  }
+  @media (max-width: 450px) {
+    .h-custom {
+      height: 100%;
+    }
+  }
+</style>
+<router-outlet></router-outlet>

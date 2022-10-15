@@ -1,0 +1,250 @@
+<mat-toolbar color="primary" class="toolbar-emp">
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>people</mat-icon>
+  </button>
+  <span>Employee Management</span>
+</mat-toolbar>
+<div style="width: 1000px; margin: auto; margin-top: 40px" class="container">
+  <div class="col-md-12 shadow-lg p-5 mb-5 bg-body rounded">
+    <div class="title-group">
+      <h1 class="text-bolder">Add New Employee</h1>
+      <mat-divider fxFlex="1 0"></mat-divider>
+    </div>
+    <form [formGroup]="addEmpForm" #addForm="ngForm">
+      <mat-card>
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input
+            matInput
+            formControlName="username"
+            placeholder="Username"
+            autocomplete="false"
+            minlength="5"
+            maxlength="15"
+          />
+        </mat-form-field>
+
+        <div *ngIf="addEmpForm.get('username')?.touched">
+          <div
+            *ngIf="addEmpForm.get('username')?.hasError('required')"
+            class="text-danger"
+            style="margin-top: -20px"
+          >
+            Username is required!
+          </div>
+          <div
+            *ngIf="addEmpForm.get('username')?.hasError('minlength')"
+            class="text-danger"
+            style="margin-top: -20px"
+          >
+            Username at least need 5 character
+          </div>
+        </div>
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input
+            matInput
+            formControlName="firstName"
+            placeholder="Your First Name"
+            class="fname"
+          />
+        </mat-form-field>
+        <div *ngIf="addEmpForm.get('firstName')?.touched">
+          <div
+            *ngIf="addEmpForm.get('firstName')?.hasError('required')"
+            class="text-danger"
+            style="margin-top: -20px"
+          >
+            First Name is required!
+          </div>
+        </div>
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input
+            matInput
+            formControlName="lastName"
+            placeholder="Your Last Name"
+            class="lname"
+          />
+        </mat-form-field>
+        <div *ngIf="addEmpForm.get('lastName')?.touched">
+          <div
+            *ngIf="addEmpForm.get('lastName')?.hasError('required')"
+            class="text-danger"
+            style="margin-top: -20px"
+          >
+            Last Name is required!
+          </div>
+        </div>
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            formControlName="email"
+            placeholder="Your Email"
+            type="email"
+          />
+        </mat-form-field>
+        <div *ngIf="addEmpForm.get('email')?.touched">
+          <div
+            *ngIf="addEmpForm.get('email')?.hasError('required')"
+            class="text-danger"
+            style="margin-top: -20px"
+          >
+            Email is required!
+          </div>
+          <div
+            *ngIf="addEmpForm.get('email')?.hasError('email')"
+            class="text-danger"
+            style="margin-top: -20px"
+          >
+            Please Enter a valid email!
+          </div>
+        </div>
+        <br />
+        <div class="form-floating mb-3">
+          <input
+            type="date"
+            class="form-control"
+            id="floatingInput"
+            formControlName="birthDate"
+            max="{{ maxDate }}"
+          />
+          <label for="floatingInput">Birth Date*</label>
+        </div>
+        <div *ngIf="addEmpForm.get('birthDate')?.touched">
+          <div
+            *ngIf="addEmpForm.get('birthDate')?.hasError('required')"
+            class="text-danger"
+            style="margin-top: -20px"
+          >
+            Birth Date is required!
+          </div>
+        </div>
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Basic Salary</mat-label>
+          <input
+            matInput
+            currencyMask
+            [(ngModel)]="basicSalary"
+            formControlName="basicSalary"
+            [options]="{ prefix: 'Rp ', thousands: '.', decimal: ',' }"
+          />
+        </mat-form-field>
+        <div *ngIf="addEmpForm.get('basicSalary')?.touched">
+          <div
+            *ngIf="addEmpForm.get('basicSalary')?.hasError('required')"
+            class="text-danger"
+            style="margin-top: -20px"
+          >
+            Basic Salary is required!
+          </div>
+          <div
+            *ngIf="addEmpForm.get('basicSalary')?.hasError('min')"
+            class="text-danger"
+            style="margin-top: -20px"
+          >
+            Basic Salary minimum Rp 500.000
+          </div>
+        </div>
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Status</mat-label>
+          <mat-select [(value)]="selected" formControlName="status">
+            <mat-option>None</mat-option>
+            <mat-option value="Permanent">Permanent</mat-option>
+            <mat-option value="Contract">Contract</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div *ngIf="addEmpForm.get('status')?.touched">
+          <div
+            *ngIf="addEmpForm.get('status')?.hasError('required')"
+            class="text-danger"
+            style="margin-top: -20px"
+          >
+            Status is required!
+          </div>
+        </div>
+        <mat-form-field appearance="outline" *ngIf="groupFilterControl">
+          <mat-label>Group</mat-label>
+          <mat-select
+            [formControl]="group"
+            formControlName="group"
+            ngDefaultControl
+            #grouplist
+            noEntriesFoundLabel="Not Found"
+          >
+            <mat-option>
+              <ngx-mat-select-search
+                [formControl]="groupFilterControl"
+                placeholderLabel="Select a Group.."
+              ></ngx-mat-select-search>
+            </mat-option>
+            <mat-option
+              *ngFor="let option of options | async"
+              [value]="option.name"
+            >
+              {{ option.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div *ngIf="addEmpForm.get('group')?.touched">
+          <div
+            *ngIf="addEmpForm.get('group')?.hasError('required')"
+            class="text-danger"
+            style="margin-top: -20px"
+          >
+            Group is required!
+          </div>
+        </div>
+        <br />
+        <div class="form-floating mb-3">
+          <input
+            type="date"
+            class="form-control"
+            id="floatingInput"
+            formControlName="description"
+            max="{{ maxDate }}"
+          />
+          <label for="floatingInput">Description*</label>
+        </div>
+        <div *ngIf="addEmpForm.get('description')?.touched">
+          <div
+            *ngIf="addEmpForm.get('description')?.hasError('required')"
+            class="text-danger"
+            style="margin-top: -20px"
+          >
+            Description is required!
+          </div>
+        </div>
+        <div class="mb-5 mr-5 ">
+              <button
+                mat-raised-button
+                class="btn btn-secondary rounded"
+                style="margin-right: 5px"
+                routerLink="/Listemployee"
+              >
+                Cancel
+              </button>
+              <button
+                mat-raised-button
+                class="btn btn-primary rounded"
+                (click)="processAdd()"
+                [disabled]="addForm.form.invalid"
+              >
+                Submit
+              </button>
+          </div>
+      </mat-card>
+       
+    </form>
+  </div>
+</div>
+<router-outlet></router-outlet>

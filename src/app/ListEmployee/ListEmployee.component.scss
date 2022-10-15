@@ -1,0 +1,145 @@
+
+.menuToBtn-spacer{
+    flex: 1 1 auto;
+}
+html, body{
+  width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+td, th {
+    width: 5%;
+}
+
+div{
+    overflow: inherit;
+}
+  
+.mat-row {
+  &:hover {
+    background-color: #e9f3ff;
+  }
+  a {
+    color: #3e75ff;
+    text-decoration: none;
+    &:hover {
+    text-decoration: underline;
+    }
+  }
+}
+
+// .mat-toolbar {
+//   position: sticky;
+//   position: -webkit-sticky;
+//   top: 0px;
+//   z-index: 999;
+// }
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-icon detailbtn {
+  color: #3e75ff;
+}
+.mat-icon editbtn {
+  color: #caf822;
+}
+.mat-icon deletebtn {
+  color: #f72828;
+}
+
+@media screen and (max-width: 920px) {
+  .mat-elevation-z8 {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .mat-header-row {
+    display: block;
+  }
+
+  tbody {
+    display: block;
+    width: 100%;
+  }
+  .mat-toolbar{
+    position: fixed;
+    margin-top: -14px;
+  }
+  .mat-card{
+    padding-top: 80px;
+    position:inherit;
+    overflow: hidden;
+  }
+
+  .mat-form-field{
+    width: 50%;
+  }
+  
+  .mat-table {
+    background: transparent;
+    * {
+      box-sizing: border-box;
+    }
+
+    .mat-row {
+      display: block;
+      overflow: hidden;
+      height: auto;
+      position: relative;
+      clear: both;
+      box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+      background-color: #fff;
+      border-radius: 3px;
+      + .mat-row {
+        margin-top: 24px;
+      }
+    }
+
+    .mat-cell {
+      display: block;
+      width: 100%;
+      padding: 0 16px;
+      margin: 16px 0;
+      text-align: right;
+      border: 0 none;
+      &:before{
+          content: attr(data-label);
+          float: left;
+          text-transform:none;
+          font-weight: normal;
+          font-size: .85em;
+      }
+      &:first-child {
+        padding: 0 48px 0 16px;
+        a {
+          font-size: 20px;
+          color: inherit;
+        }
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    .has_label_on_mobile {
+      &:before {
+        content: attr(data-label);
+        display: inline;
+        font-weight: normal;
+      }
+    }
+
+  }
+
+  .mat-paginator {
+    margin-top: 24px;
+  }
+
+}
