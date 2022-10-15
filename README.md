@@ -18,7 +18,7 @@ Terdapat Fitur Crud diantaranya :
 
 ## Cara instalasi Project Employee Management
 1. Saat ini saya menggunakan Nodejs versi v16.12.0.
-2. Clone repository dari ``
+2. Clone repository dari `https://github.com/yabiyabi127/EmployeeManag`
 3. Setelah clone selesai buka direktorynya lalu buka di Vscode
 4. Setelah di buka VScode buka terminal jalankan `npm instal` di terminal 1, setelah beres npm install jalankan Rest Apinya run `npx json-server --watch ./employee.json` di terminal ke 2.
 5. Setelah npm install dan Rest Apinya di jalankan , lalu run `ng serve` di terminal 1.
@@ -26,6 +26,6 @@ Terdapat Fitur Crud diantaranya :
 7. untuk login gunakan Username: hari || Password: hari127
 
 ## Screenshot 
-![screenshot](https://drive.google.com/file/d/1m8Uxq6eyZozHACYiGAT5Vvkovx4AAIQr/view?usp=sharing)
-![screenshot](https://drive.google.com/file/d/1yFh2Vo2z4JMs5fTIEkXKoglVEsp54WJG/view?usp=sharing)
-![screenshot](https://drive.google.com/file/d/17Z_l0LVXCS4o8nLt9boZiorQ9clhxr8Y/view?usp=sharing)
+[Screenshot1](https://drive.google.com/file/d/1m8Uxq6eyZozHACYiGAT5Vvkovx4AAIQr/view?usp=sharing)
+[screenshot2](https://drive.google.com/file/d/1yFh2Vo2z4JMs5fTIEkXKoglVEsp54WJG/view?usp=sharing)
+[screenshot3](https://drive.google.com/file/d/17Z_l0LVXCS4o8nLt9boZiorQ9clhxr8Y/view?usp=sharing)
