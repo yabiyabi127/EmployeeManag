@@ -1,0 +1,167 @@
+{
+  "loginAccount": [
+    {
+      "id": 1,
+      "username": "hari",
+      "password": "hari127"
+    }
+  ],
+  "employee": [
+    {
+      "username": "hadia7",
+      "firstName": "hadi",
+      "lastName": "pratama",
+      "email": "haripratama22@gmail.com",
+      "birthDate": "2022-09-27",
+      "basicSalary": 8900000,
+      "status": "Permanent",
+      "group": "Human Resource",
+      "description": "2022-10-10",
+      "id": 112
+    },
+    {
+      "username": "rizal776",
+      "firstName": "rizal",
+      "lastName": "pratama",
+      "email": "zalpratama22@gmail.com",
+      "birthDate": "2022-09-27",
+      "basicSalary": 8900000,
+      "status": "Permanent",
+      "group": "Human Resource",
+      "description": "2022-10-10",
+      "id": 113
+    },
+    {
+      "username": "bellagh12",
+      "firstName": "bella",
+      "lastName": "lestari",
+      "email": "bella23@gmail.com",
+      "birthDate": "2022-10-05",
+      "basicSalary": 5600000,
+      "status": "Contract",
+      "group": "DevOps Enginner",
+      "description": "2022-10-11",
+      "id": 115
+    },
+    {
+      "username": "liadmu12",
+      "firstName": "lia",
+      "lastName": "demune",
+      "email": "liadem5@gmail.com",
+      "birthDate": "2022-10-03",
+      "basicSalary": 5500000,
+      "status": "Contract",
+      "group": "UI/UX Designer",
+      "description": "2022-10-11",
+      "id": 116
+    },
+    {
+      "username": "teddyhs77",
+      "firstName": "teddy",
+      "lastName": "hestyu",
+      "email": "teddyhen77@gmail.com",
+      "birthDate": "2022-10-07",
+      "basicSalary": 6500000,
+      "status": "Contract",
+      "group": "FrontEnd Enginner",
+      "description": "2022-10-14",
+      "id": 117
+    },
+    {
+      "username": "rianff23",
+      "firstName": "rian",
+      "lastName": "herdiansyah",
+      "email": "rianher12@gmail.com",
+      "birthDate": "2022-09-27",
+      "basicSalary": 6200000,
+      "status": "Permanent",
+      "group": "Project Manager",
+      "description": "2022-10-12",
+      "id": 118
+    },
+    {
+      "username": "anonimDota12",
+      "firstName": "anonim",
+      "lastName": "anonemo",
+      "email": "anonimdota12@gmail.com",
+      "birthDate": "2022-10-06",
+      "basicSalary": 7000000,
+      "status": "Permanent",
+      "group": "DevOps Enginner",
+      "description": "2022-10-08",
+      "id": 119
+    },
+    {
+      "username": "ibot13",
+      "firstName": "ibot",
+      "lastName": "dekam",
+      "email": "ibot13@gmail.com",
+      "birthDate": "2022-10-06",
+      "basicSalary": 6000000,
+      "status": "Contract",
+      "group": "UI/UX Designer",
+      "description": "2022-10-09",
+      "id": 120
+    },
+    {
+      "username": "arilcuiras23",
+      "firstName": "ariel",
+      "lastName": "cuiras",
+      "email": "arielcui23@gmail.com",
+      "birthDate": "2022-09-30",
+      "basicSalary": 8000000,
+      "status": "Permanent",
+      "group": "IOS Dev",
+      "description": "2022-10-12",
+      "id": 121
+    },
+    {
+      "username": "Dota127",
+      "firstName": "dota",
+      "lastName": "forever",
+      "email": "dota123@gmail.com",
+      "birthDate": "2022-09-27",
+      "basicSalary": 6800000,
+      "status": "Permanent",
+      "group": "Head of IT Research",
+      "description": "2022-09-25",
+      "id": 122
+    },
+    {
+      "username": "harikurniawan12",
+      "firstName": "Hari",
+      "lastName": "Kurniawan",
+      "email": "hariniawadev@gmail.com",
+      "birthDate": "1997-10-06",
+      "basicSalary": 25000000,
+      "status": "Permanent",
+      "group": "FrontEnd Enginner",
+      "description": "2022-10-15",
+      "id": 123
+    },
+    {
+      "username": "dianpoi22",
+      "firstName": "dian",
+      "lastName": "pointer",
+      "email": "dian123@gmail.com",
+      "birthDate": "2022-09-27",
+      "basicSalary": 7800000,
+      "status": "Permanent",
+      "group": "Project Manager",
+      "description": "2022-10-11",
+      "id": 124
+    },
+    {
+      "username": "ekadewi33",
+      "firstName": "Eka",
+      "lastName": "dewi",
+      "email": "ekadian@gmail.com",
+      "birthDate": "2022-10-05",
+      "basicSalary": 7600000,
+      "status": "Permanent",
+      "group": "Software Tester",
+      "description": "2022-10-12",
+      "id": 125
+    }
+  ]
+}

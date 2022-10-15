@@ -1,0 +1,91 @@
+<mat-toolbar color="primary" class="toolbar-emp">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>people</mat-icon>
+    </button>
+    <span>Employee Database</span>
+</mat-toolbar>
+<div style="width: 1000px; margin: auto; margin-top:20px;">
+    <div class="col-md-12 shadow-lg p-5 mb-5 bg-body rounded">
+    <div class="title-group">
+        <mat-divider fxFlex="1 0"></mat-divider>
+    </div>
+    <mat-card class="card rounded">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Employee Detail</h2>
+            </div>
+        </div>
+        <br />
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-right">
+                        <p>
+                            <strong>Full name:</strong>
+                        </p>
+                        <p>
+                            <strong>User Name: </strong>
+                        </p>
+                        <p>
+                            <strong>Email: </strong>
+                        </p>
+                        <p>
+                            <strong>Birth Date: </strong>
+                        </p>
+                        <p>
+                            <strong>Status: </strong>
+                        </p>
+                        <p>
+                            <strong>Position: </strong>
+                        </p>
+                        <p>
+                            <strong>Description: </strong>
+                        </p>
+                        </td>
+                        <td>
+                        <p>
+                            <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> {{ currentEmployee.firstName }} {{ currentEmployee.lastName }} </strong>
+                        </p>
+                        <p>
+                            <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> {{ currentEmployee.username }}</strong>
+                        </p>
+                        <p>
+                            <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> {{ currentEmployee.email }} </strong>
+                        </p>
+                        <p>
+                            <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> {{ currentEmployee.birthDate }}</strong>
+                        </p>
+                       
+                        <p>
+                            <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> {{ currentEmployee.status }}</strong>
+                        </p>
+                        <p>
+                            <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> {{ currentEmployee.group }}</strong>
+                        </p>
+                        <p>
+                            <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> {{ currentEmployee.description }}</strong>
+                        </p>
+                        </td>
+                    </tr>
+                    <tr style="color: #3000cf;">
+                        <td class="text-right"><h4><strong>Basic Salary:</strong></h4></td>
+                        <td class="text-left"><h4><strong><i class="fas fa-rupee-sign" area-hidden="true"></i> {{ currentEmployee.basicSalary | currency:'Rp. ' }} </strong></h4></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <mat-card-actions>
+          <button mat-raised-button class="btn btn-danger rounded" routerLink="/Listemployee">BACK</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+</div>
+
+  <router-outlet></router-outlet>
